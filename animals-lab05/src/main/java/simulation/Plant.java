@@ -10,4 +10,6 @@ public class Plant {
     public Vector2D getPosition() {
         return position;
     }
+
+
 }
