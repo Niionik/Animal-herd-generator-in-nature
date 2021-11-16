@@ -2,6 +2,8 @@ package simulation;
 
 public class Animal {
 	private Vector2D position;
+	private int energy;
+	private int age;
 
 	public Animal(Vector2D position) {
 		this.position = position;
@@ -10,6 +12,33 @@ public class Animal {
 	public Vector2D getPosition() {
 		return position;
 	}
+
+	public Animal(Vector2D position, int energy) {
+		this.position = position;
+		this.energy = energy;
+		this.age = 1;
+	}
+
+	public int getEnergy(){
+		return energy;
+
+	}
+
+	public int getAge(){
+		return age;
+	}
+
+	public Animal aging(){
+		age++;
+		return this;
+	}
+
+	public Animal setEnergy(int energy){
+		this.energy = energy;
+		return this;
+	}
+
+	public Vector2D getPosition(){return }
 
 	public void move(MapDirection direction) {
 		position = pbc(position.add(direction.getUnitVector()));
